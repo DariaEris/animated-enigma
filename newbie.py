@@ -1,4 +1,5 @@
 import discord
+import os
 import asyncio
 
 from discord.ext import commands
@@ -146,5 +147,5 @@ async def on_message(message):
         await author.remove_roles(role)
         await message.channel.send('5넴 퇴장')
 
-client.run("Njg5NzkyNDA4NjgyMTAyODEz.XnILSQ.U8xXahqxtA2-V5javQtkWidv6Lo")
-
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
